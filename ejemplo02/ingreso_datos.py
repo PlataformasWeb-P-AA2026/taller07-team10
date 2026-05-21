@@ -10,7 +10,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Lectura de clubes
-archivo = open("data/datos_clubs.txt", "r", encoding="utf-8")
+archivo = open("data/datos_clubs.txt", "r", encoding="utf-8-sig")
 
 for linea in archivo:
     datos = linea.strip().split(";")
@@ -28,7 +28,7 @@ archivo.close()
 session.commit()
 
 # Lectura de jugadores
-archivo = open("data/datos_jugadores.txt", "r", encoding="utf-8")
+archivo = open("data/datos_jugadores.txt", "r", encoding="utf-8-sig")
 
 for linea in archivo:
     datos = linea.strip().split(";")
